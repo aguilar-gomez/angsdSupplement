@@ -35,13 +35,13 @@ def calculate_Tajimas(window):
         e1 = c1/a1
         e2 = c2/(a1**2+a2)
         S = [tW*a1 for tW in float(x[0])]
-        TajimasD<-[(tP-tW)/(sqrt(e1*s+e2*s*(s-1))) for tP,tW,s in zip(float(x[0]),float(x[1]),S)]
+        TajimasD = [(tP-tW)/(sqrt(e1*s+e2*s*(s-1))) for tP,tW,s in zip(float(x[0]),float(x[1]),S)]
 
 
         return [sumW, sum_P, TajimasD]
 
-start_chr="None"
-window=[]
+start_chr = "None"
+window =[]
 for line in infile:
         column=line.split("\n")[0].split("\t")
         chromosome=column[0]
