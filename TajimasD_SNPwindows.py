@@ -24,8 +24,8 @@ def calculate_Tajimas(window):
         Order in vector:  Watterson     Pairwise        thetaSingleton  thetaH  thetaL
         Returns a list with [sumW, sum_P, TajimasD]
         '''
-        sum_W = np.sum([float(x[0]) for x in window])
-        sum_P = np.sum([float(x[1]) for x in window])
+        tW = np.sum([float(x[0]) for x in window])
+        tP = np.sum([float(x[1]) for x in window])
         a1 = sum([1/x for x in range(1,n)])
         a2 = sum([1/x**2 for x in range(1,n)])
         b1 = (n+1)/(3*(n-1))
@@ -34,11 +34,11 @@ def calculate_Tajimas(window):
         c2 = b2-((n+2)/(a1*n))+(a2/a1**2)
         e1 = c1/a1
         e2 = c2/(a1**2+a2)
-        S = [tW*a1 for tW in float(x[0])]
-        TajimasD = [(tP-tW)/(sqrt(e1*s+e2*s*(s-1))) for tP,tW,s in zip(float(x[0]),float(x[1]),S)]
-
+        S = tW*a1
+        TajimasD = (tP-tW)/(sqrt(e1*S+e2*S*(S-1))) 
 
         return [sumW, sum_P, TajimasD]
+
 
 start_chr = "None"
 window =[]
