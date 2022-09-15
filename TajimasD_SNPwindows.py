@@ -37,7 +37,7 @@ def calculate_Tajimas(window):
         S = tW*a1
         TajimasD = (tP-tW)/(np.sqrt(e1*S+e2*S*(S-1))) 
 
-        return [sumW, sum_P, TajimasD]
+        return [tW, tP, TajimasD]
 
 
 start_chr = "None"
