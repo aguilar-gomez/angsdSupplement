@@ -14,7 +14,7 @@ nindividuals=int(sys.argv[4])
 
 outfile= open(outfilename,"w+")
 infile = open(filename, "r")
-outfile.write("\t".join(["chr","w_start","w_end","Watterson","Pairwise","TajimasD"])+"\n")
+outfile.write("\t".join(["chr","w_start","w_end","Nsites","Watterson","Pairwise","TajimasD"])+"\n")
 
 n=2*nindividuals
 
