@@ -10,7 +10,7 @@ import numpy as np
 filename=sys.argv[1]
 outfilename=sys.argv[2]
 window_min=int(sys.argv[3])
-feature=int(sys.argv[4])
+feature=sys.argv[4]
 
 outfile= open(outfilename,"w+")
 infile = open(filename, "r")
