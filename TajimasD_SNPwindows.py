@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Author : Diana Aguilar
 '''
-SNP windows of PBS
+SNP windows of TajimasD
 '''
 import sys
 import pandas as pd
