@@ -21,7 +21,7 @@ def calculate_mean(window):
         '''
         Order in vector:  feature
         '''
-        window = np.mean(window)
+        window = np.mean([float(x[0]) for x in window])
         return [window]
 
 
@@ -44,6 +44,7 @@ for line in infile:
                 w_start = SNP_pos
         if len(window) == window_min:
                 w_end = SNP_pos
+                #print([float(x[0]) for x in window])
                 outfile.write('\t'.join([chromosome,w_start,w_end,str(len(window))]+[str(i) for i in calculate_mean(window)])+"\n")
                 window = []
         else:
