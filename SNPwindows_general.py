@@ -21,7 +21,7 @@ def calculate_mean(window):
         '''
         Order in vector:  feature
         '''
-        window = np.mean(window)
+        window = np.mean([float(x[0]) for x in window])
         return [window]
 
 
