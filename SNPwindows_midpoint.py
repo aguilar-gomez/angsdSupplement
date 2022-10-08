@@ -63,7 +63,7 @@ for line in first_it:
                 if nchromosome == chromosome:
                         w_end = math.floor((int(SNP_pos)+int(nSNP_pos))/2)
                 else:
-                        wend=SNP_pos
+                        w_end=SNP_pos
                 outfile.write('\t'.join([chromosome,str(w_start),str(w_end),str(len(window))]+[str(i) for i in calculate_mean(window)])+"\n")
                 window = []
         else:
