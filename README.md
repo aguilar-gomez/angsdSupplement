@@ -14,9 +14,9 @@ Arguments:
 - inFile: name of infile, thetaStat print output( $pop.thetas.persite.txt )
 - outFile: name of output file
 - nSites: number of sites per window
-- PopSize: population size
+- nIndiv: number of individuals 
 
 Usage: 
 ```
-Tajimas_SNPmidpoint.py inFile outFile nSites PopSize
+Tajimas_SNPmidpoint.py inFile outFile nSites nIndiv
 ```
