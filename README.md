@@ -1,7 +1,7 @@
 # angsdSupplement
 
 
-#Tajimas D 
+## Tajima' s D 
 
 - Takes the output of angsd thetas calculations 
 ```
