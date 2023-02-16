@@ -10,4 +10,13 @@ realSFS saf2theta $pop.saf.idx -sfs $pop.folded.sfs -outname $pop
 thetaStat print $pop.thetas.idx > $pop.thetas.persite.txt
 ```
 
-Usage: Tajimas_SNPmidpoint.py $pop.thetas.persite.txt outFile nSites PopSize
+Arguments:
+- inFile: name of infile, thetaStat print output( $pop.thetas.persite.txt )
+- outFile: name of output file
+- nSites: number of sites per window
+- PopSize: population size
+
+Usage: 
+```
+Tajimas_SNPmidpoint.py inFile outFile nSites PopSize
+```
